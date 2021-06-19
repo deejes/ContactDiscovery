@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "165391482517",
+    "project_id": "free-to-talk",
+    "storage_bucket": "free-to-talk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165391482517:android:078543ad1905961439a59c",
+        "android_client_info": {
+          "package_name": "com.rilke.ftt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165391482517-qlr6qds3ls7ktfbonmv6ldhi226jkh0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY8bFH69mxlxOg5F7L155GMk51CYm0NZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165391482517-qlr6qds3ls7ktfbonmv6ldhi226jkh0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
