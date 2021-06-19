@@ -25,6 +25,7 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -41,12 +42,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.recycler_view);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef;
-        myRef = database.getReference("message");
 
-        myRef.setValue("Hello, World!");
-        checkPermission();
+
+//        checkPermission();
     }
 
     private void checkPermission() {
@@ -64,6 +62,13 @@ public class MainActivity extends AppCompatActivity {
         String sort = ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME+" ASC";
 
         Cursor cursor = getContentResolver().query(uri, null, null, null, sort);
+
+        // initialize firebase database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef;
+
+        Long i = 0l;
+
         if ( cursor.getCount() > 0 ){
             while (cursor.moveToNext()){
                 try {
@@ -84,6 +89,13 @@ public class MainActivity extends AppCompatActivity {
                         model.setNumber(number);
                         arrayList.add(model);
                         phoneCursor.close();
+
+                        // write to database
+//                        writeToDatabase(name,);
+
+                        myRef = database.getReference("name"+i);
+                        i = i + 1l;
+                        myRef.setValue(name);
                     }
 
                 } catch (Exception e ) {
@@ -97,6 +109,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new MainAdapter(this, arrayList);
         recyclerView.setAdapter(adapter);
+    }
+
+    private void writeToDatabase() {
+
     }
 
     @Override
