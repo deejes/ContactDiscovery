@@ -1,6 +1,7 @@
 package com.example.contactlist;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
@@ -35,11 +36,23 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<ContactModel> arrayList = new ArrayList<ContactModel>();
     MainAdapter adapter;
+    private Button register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        register = (Button)findViewById(R.id.register_button);
+        register.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                ;
+            }
+        });
 
         recyclerView = findViewById(R.id.recycler_view);
 

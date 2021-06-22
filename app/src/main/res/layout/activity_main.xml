@@ -24,7 +24,7 @@
      tools:layout_editor_absoluteY="0dp" />
 
  <Button
-     android:id="@+id/register_view"
+     android:id="@+id/register_button"
      android:layout_width="50dp"
      android:layout_height="50dp"
      android:text="register"
@@ -35,7 +35,7 @@
      android:layout_marginRight="196dp"
      android:layout_marginBottom="2dp" />
  <Button
-     android:id="@+id/login_view"
+     android:id="@+id/login_button"
      android:layout_width="50dp"
      android:textSize="2mm"
      android:layout_height="50dp"
