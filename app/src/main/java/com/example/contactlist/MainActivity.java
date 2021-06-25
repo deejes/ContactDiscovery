@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         {
             @Override
             public void onClick(View v) {
-                Intent send = new Intent(MainActivity.this, RegisterUser.class);
+                Intent send = new Intent(MainActivity.this, MenuMainActivity.class);
                 startActivity(send);
 
             }
